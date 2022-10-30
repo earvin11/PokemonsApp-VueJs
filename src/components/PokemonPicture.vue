@@ -1,12 +1,14 @@
 <template>
   <div class="pokemon-container">
-
-    <img :src="imgSrc" 
+    
+    <!-- Solo muestras esto si (v-if) la propiedad showPokemon es false -->
+    <img v-if="!showPokemon" 
+      :src="imgSrc" 
       class="hidden-pokemon"  
       alt="pokemon">
-  
-      <!-- Solo muestras esto si (v-if) la propiedad showPokemon es true -->
-    <img v-if="showPokemon" 
+    
+    <!-- Sino muestra esto (v-else) -->
+    <img v-else 
       :src="imgSrc"
       class="fade-in"
       alt="pokemon">
